@@ -4,7 +4,7 @@ def main():
    """ Function to rename multiple files """
    i = 0
    path="D:/2020-21/ComputerVision/Crawler/Power port/"
-   image=[j.split(".jpg")[0] for j in os.listdir(path) if j.endswith('.jpg')]
+   image=[j for j in os.listdir(path) if j.endswith('.jpg')]
    for filename in tqdm(image):
       my_dest ="PowerPort_" + str(i) + ".jpg"
       my_source =path + filename
